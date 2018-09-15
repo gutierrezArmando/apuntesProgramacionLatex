@@ -1,40 +1,35 @@
-\documentclass{beamer}
+%Manual
+\documentclass[10pt]{beamer}
 \usepackage[spanish]{babel}
-
-%\usepackage{graphicx,hyperref,url, materialbeamer} /*No compilaba con materialbeamer*/
-\usepackage{graphicx, hyperref, url}
-\usepackage{braket}
-%\usepackage{euler}
-\usepackage{booktabs} % Required to use toprule, middlerule, and bottomrule in tables
-\usepackage[utf8]{inputenc} % Required for spanish special symbols
-\usepackage{listings} % Required for writing programming code blocks
-\usepackage{color} % Required for adding color to code blocks
-\lstset{language=C, numbersep=1pt} % Required to indicate the programming language in use
-\usepackage{xfrac} % Required for adding style to fractions
-\usepackage{tabu} % Required to manage table size
-
-\graphicspath{ {./figs/} }
-\setbeamercovered{transparent}
-
-\lstdefinestyle{customsql}{
-  belowcaptionskip=1\baselineskip,
-  breaklines=true,
-  xleftmargin=\parindent,
-  language=SQL,
-  showstringspaces=false,
-  basicstyle=\footnotesize\ttfamily,
-  keywordstyle=\bfseries\color{green!40!black},
-  commentstyle=\itshape\color{purple!40!black},
-  identifierstyle=\color{blue},
-  stringstyle=\color{orange},
-}
-
-\lstset{escapechar=@,style=customsql}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usetheme{CambridgeUS}
+%\usetheme{Frankfurt}
+%\usetheme{Madrid}
+\setbeamercovered{highly dynamic}
 \usefonttheme{professionalfonts} % using non standard fonts for beamer
 
+\title[Programación]{Programación}
+\subtitle{Tronco Común de Ingeniería \\ FCQI}
+\author[Violeta Ocegueda]{Violeta Ocegueda}
+\institute[UABC]{Profesor-Investigador \\ Facultad de Ciencias Químicas e Ingeniería \\ Universidad Autónoma de Baja California \\ Campus Tijuana}
+\date[\today]{\today}
+%\titlegraphic{\includegraphics[scale=0.2]{Imagenes/Principal.JPG} }
+\AtBeginSection{\frame{\frametitle{Contenido}\tableofcontents[current]}}
 
 \begin{document}
-\begin{frame}{First Slide(A)}
-First Content
+\frame{\titlepage}
+%-------------------------------------------------------%
+\begin{frame}
+  \frametitle{Contenido}
+  \tableofcontents
 \end{frame}
+
+%\input{metodologia}
+%\input{introduccionLenguaje}
+%\input{seleccion}
+%\input{repeticion}
+%\input{arreglos}
+%\input{cadenas}
+%\input{funciones}
 \end{document}
