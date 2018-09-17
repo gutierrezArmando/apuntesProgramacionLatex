@@ -3,10 +3,29 @@
 \usepackage[spanish]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\usefonttheme{professionalfonts}
+\usepackage{xcolor}
+\usepackage{textcomp}
+
 \usetheme{CambridgeUS}
 %\usetheme{Frankfurt}
 %\usetheme{Madrid}
 \setbeamercovered{highly dynamic}
+
+\lstdefinestyle{customsql}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  xleftmargin=\parindent,
+  language=SQL,
+  showstringspaces=false,
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+}
+\lstset{escapechar=@,style=customsql}
+
 \usefonttheme{professionalfonts} % using non standard fonts for beamer
 
 \title[Programación]{Programación}
@@ -24,8 +43,7 @@
   \frametitle{Contenido}
   \tableofcontents
 \end{frame}
-
-%\input{metodologia}
+\input{metodologia}
 %\input{introduccionLenguaje}
 %\input{seleccion}
 %\input{repeticion}
