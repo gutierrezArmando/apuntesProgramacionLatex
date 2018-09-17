@@ -1,19 +1,20 @@
-%Manual
-\documentclass[10pt]{beamer}
-\usepackage[spanish]{babel}
+\documentclass[10pt]{beamer}% Define document type as Beamer
+\usepackage[spanish]{babel}% To use spanish languaje
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usefonttheme{professionalfonts}
-\usepackage{xcolor}
-\usepackage{textcomp}
 
-\usetheme{CambridgeUS}
+\usepackage{listings} % Required for writing programming code blocks
+\usepackage{color} % Required for adding color to code blocks
+\lstset{language=C, numbersep=1pt} % Required to indicate the programming language in use
+
+\usetheme{CambridgeUS}%Templeate for beamer
 %\usetheme{Frankfurt}
 %\usetheme{Madrid}
 \setbeamercovered{highly dynamic}
 
 \lstdefinestyle{customsql}{
   belowcaptionskip=1\baselineskip,
+  tabsize = 4,
   breaklines=true,
   xleftmargin=\parindent,
   language=SQL,
@@ -24,6 +25,7 @@
   identifierstyle=\color{blue},
   stringstyle=\color{orange},
 }
+
 \lstset{escapechar=@,style=customsql}
 
 \usefonttheme{professionalfonts} % using non standard fonts for beamer
@@ -35,6 +37,8 @@
 \date[\today]{\today}
 %\titlegraphic{\includegraphics[scale=0.2]{Imagenes/Principal.JPG} }
 \AtBeginSection{\frame{\frametitle{Contenido}\tableofcontents[current]}}
+\lstdefinestyle{customc}{
+}
 
 \begin{document}
 \frame{\titlepage}
@@ -43,7 +47,19 @@
   \frametitle{Contenido}
   \tableofcontents
 \end{frame}
-\input{metodologia}
+\begin{frame}[fragile]
+	\begin{lstlisting}
+		#include<stdio.h>
+		
+		//Metodo main
+		int main(void)
+		{
+			puts("\nHola mundo");
+			return 0;
+		}
+	\end{lstlisting}
+\end{frame}
+%\input{metodologia}
 %\input{introduccionLenguaje}
 %\input{seleccion}
 %\input{repeticion}
