@@ -1,0 +1,75 @@
+%!TEX root = P_Manual.tex
+\setlength{\parskip}{\baselineskip} 
+\section*{Lenguaje}
+
+% --------------------------------- Slide 01 ----------------------------------------- %
+\begin{frame}[c] 
+\frametitle{}
+\centering
+\huge \textbf{Introducción al lenguaje de programación}
+\end{frame}
+
+
+% --------------------------------- Slide 02 ----------------------------------------- %
+\begin{frame}[t, fragile]
+\frametitle{Estructura básica de un programa}
+\begin{lstlisting}
+/* Inclusion de librerias */
+
+void main() /* cabecera de funcion */
+{ /* inicio de la funcion main */
+
+... /* Sentencias */
+
+} /* fin de la funcion main */
+\end{lstlisting}
+\end{frame}
+
+
+% --------------------------------- Slide 03 ----------------------------------------- %
+\begin{frame}[fragile]
+\frametitle{Estructura básica de un programa para la clase}
+\begin{lstlisting}
+/* Inclusion de librerias */
+
+void main() /* cabecera de funcion */
+{ /* inicio de la funcion main */
+
+/* Declaracion de variables */
+
+/* Entrada de datos */
+
+/* Procesamiento */
+
+/* Impresion de resultados */
+
+} /* fin de la funcion main */
+\end{lstlisting}
+\end{frame}
+
+
+% --------------------------------- Slide 04 ----------------------------------------- %
+\begin{frame}[fragile, t]
+\frametitle{Zonas de memoria}
+\textbf{Variables}\\
+\footnotesize
+\begin{itemize}
+	\item Son objetos que pueden cambiar su valor durante la ejecución de un programa.
+	\item En C una \textit{variable} es una posición en memoria con nombre donde se almacena un valor de un cierto tipo de dato.
+\end{itemize}
+\vspace{-2mm}
+La \textit{declaración} de una variable es una sentencia que proporciona información de la variable al compilador C. Su sintaxis es:
+\begin{lstlisting}
+<tipo_variable> <nombre_variable> = <valor_inicial>;
+\end{lstlisting}
+\vspace{-4mm}
+Donde:
+\vspace{-4mm}
+\begin{itemize}
+	\item \textit{tipo\_variable} es el nombre de un tipo de dato conocido por C.
+	\item \textit{nombre\_variable} es un identificador (nombre) válido en C.
+	\item \textit{valor\_inicial} es el valor de inicialización de la variable.
+\end{itemize}
+\end{frame}
+
+% --------------------------------- Slide 04 ----------------------------------------- %
