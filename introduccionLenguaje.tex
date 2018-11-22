@@ -113,7 +113,9 @@ void main() /* cabecera de funcion */
 
 % --------------------------- Slide 07 --------------------------------- %
 \begin{frame}[t]{Operadores}
-\textbf{Operadores aritméticos}\\ \vspace{5mm}
+\textbf{Operadores aritméticos}\\
+\vspace{5mm}
+\small
 \begin{center}
 	\begin{tabular}{cccc}
 		\toprule
@@ -149,6 +151,7 @@ void main() /* cabecera de funcion */
 % --------------------------- Slide 09 --------------------------------- %
 \begin{frame}[t]{Operadores}
 \textbf{Operadores lógicos: AND lógico}\\ \vspace{3mm}
+\small
 \begin{center}
 %\caption{Tabla de verdad para el operador \textit{\&\&} (AND l\'ogico).}
 \begin{tabular}{llc}
@@ -209,7 +212,7 @@ diferente de cero & 0\\
 	\midrule
 	++&++a& Incrementar a en 1 y después utiliza el nuevo valor de a en la expresión en la que reside.\\
 	++ & a++ & Utiliza el valor actual de a en la expresión en la que reside, y después la incrementa en 1.\\
-	$--$ & $--$b & Decrementar b en 1 y despu\'es utiliza el nuevo valor de b en la expresión en la que reside.\\
+	$--$ & $--$b & Decrementar b en 1 y después utiliza el nuevo valor de b en la expresión en la que reside.\\
 	$--$ & b$--$ & Utiliza el valor actual de b en la expresión en la que reside, y después decrementa b en 1.\\
 	\bottomrule
 \end{tabular}
@@ -220,7 +223,7 @@ diferente de cero & 0\\
 % --------------------------- Slide 13 --------------------------------- %
 \begin{frame}[t]{Operadores}
 \textbf{Jerarquía de operadores}\\ \vspace{5mm}
-\footnotesize
+\scriptsize
 %\begin{table}[h]
 \centering
 %\caption{Jerarqu\'ia de operadores}
@@ -241,15 +244,17 @@ diferente de cero & 0\\
 %\end{table}
 \end{frame}
 
+
 % --------------------------- Slide 14 --------------------------------- %
 \begin{frame}{Instrucción de salida}
 La instrucción de salida utilizada en C se denomina \textbf{printf}. Su sintaxis es:\\
 \vspace{5mm}
-%\scriptsize
 
 {\small \textit{printf( ``texto a imprimir'' );}\\
 \textit{printf( ``texto a imprimir \%formato\_de\_impresión'',variable\_a\_imprimir );}}
 \end{frame}
+
+
 % --------------------------- Slide 15 --------------------------------- %
 \begin{frame}[t]
 \frametitle{Formato de salida con printf}
@@ -329,29 +334,31 @@ La instrucción de salida utilizada en C se denomina \textbf{printf}. Su sintaxi
 \begin{frame}[t]{Secuencias de escape}
 \small
 \begin{center}
-\begin{tabular}{lp{6cm}}
+\begin{tabular}{p{3.5cm}p{6.5cm}}
 	\toprule
 	\textbf{Secuencia de escape} & \textbf{Descripción}\\
 	\midrule
 	\textbackslash a (alerta o campana) & Provoca una alerta sonora (campana) o una alerta visual.\\
 	\textbackslash \textbackslash (diagonal invertida) & Despliega el caracter de diagonal invertida (\textbackslash).\\
-	\textbackslash ' (comilla sencilla) & Despliega el caracter de comilla sencilla (').\\
+	\textbackslash ' (comilla sencilla) & Despliega el caracter de comilla sencilla (').
+	\\
 	\textbackslash '' (comilla doble) & Despliega el caracter de comilla doble (''). \\ 
 	\textbackslash ? (interrogación) & Despliega el caracter de interrogación (?).\\
+	\textbackslash n (nueva línea) & Mueve el cursor al inicio de la siguiente línea.\\
 	\bottomrule
 \end{tabular}
 \end{center}
 \end{frame}
 
 % --------------------------- Slide 20 --------------------------------- %
-\begin{frame}[t]{Secuencias de escape}
+\begin{frame}[t]{Secuencias de escape (Continuación)}
+\vspace{-4mm}
 \small
 \begin{center}
-	\begin{tabular}{lp{6cm}}
+	\begin{tabular}{p{4cm}p{6cm}}
 		\toprule
 		\textbf{Secuencia de escape} & \textbf{Descripción}\\
-		\midrule
-		\textbackslash n (nueva l\'inea) & Mueve el cursor al inicio de la siguiente l\'inea.\\ 
+		\midrule 
 		\textbackslash t (tabulador horizontal) & Mueve el cursor a la siguiente posición del tabulador.\\
 		\textbackslash b (retroceso) & Mueve el cursor una posición hacia atrás en la línea actual.\\
 		\textbackslash f (nueva página o avance de página) & Mueve el cursor al inicio de la siguiente página l\'ogica.\\
@@ -363,7 +370,7 @@ La instrucción de salida utilizada en C se denomina \textbf{printf}. Su sintaxi
 \end{frame}
 
 % --------------------------- Slide 21 --------------------------------- %
-\begin{frame}[t]{Banderas de la cadena de control de formato}
+\begin{frame}{Banderas de la cadena de control de formato}
 \small
 %\begin{table}[h]
 \centering
@@ -371,9 +378,11 @@ La instrucción de salida utilizada en C se denomina \textbf{printf}. Su sintaxi
 \begin{tabular}{lp{6cm}}
 	\toprule
 	\textbf{Bandera} & \textbf{Descripción}\\
-	\midrule
-	\textbackslash$-$ (signo menos) & Justifica la salida a la izquierda dentro del campo especificado.\\
+	\midrule 
+	\textbackslash$-$ (signo menos) & Justifica la salida a la izquierda dentro del campo especificado.\\ 
+	\hline
 	\textbackslash+ (signo más) & Despliega el signo más que precede a los valores positivos, y un signo menos que precede a los valores negativos.\\
+	\hline
 	\textit{espacio} & Imprime un espacio antes de un valor positivo no impreso con la bandera +.\\
 	\bottomrule
 \end{tabular}
@@ -396,8 +405,8 @@ Donde:
 % --------------------------- Slide 23 --------------------------------- %
 \begin{frame}[t]{Formato de entrada con scanf}
 \textbf{Especificadores de conversi\'on de enteros para \textit{scanf}}
+\vspace{-2mm}
 \small
-%\begin{table}[h]
 \begin{center}
 %\caption{Especificadores de conversi\'on de enteros para \textit{scanf}.}
 \begin{tabular}{lp{6cm}}
@@ -409,15 +418,14 @@ Donde:
 	\%o & Lee un entero octal. El argumento corespondiente es un apuntador a un entero sin signo.\\
 	\bottomrule
 \end{tabular}
-%\end{table}
 \end{center}
 \end{frame}
 
 % --------------------------- Slide 24 --------------------------------- %
 \begin{frame}[t]{Formato de entrada con scanf (Continuación)}
 \textbf{Especificadores de conversi\'on de enteros para \textit{scanf}}
+\vspace{-2mm}
 \small
-%\begin{table}[h]
 \begin{center}
 	%\caption{Especificadores de conversi\'on de enteros para \textit{scanf}.}
 	\begin{tabular}{lp{6cm}}
@@ -429,7 +437,6 @@ Donde:
 		h \'o l & Se coloca antes de cualquier especificador de conversi\'on, para indicar que se introducir\'a un entero corto o largo, respectivamente.\\
 		\bottomrule
 	\end{tabular}
-	%\end{table}
 \end{center}
 \end{frame}
 
@@ -449,7 +456,6 @@ Donde:
 	l \'o L & Se coloca antes de cualquier especificador de conversión para indicar que se introducir\'a un valor \textbf{double} o \textbf{long double}. El argumento correspondiente es un apuntador a una varible \textbf{double} o \textbf{long double}.\\ 
 	\bottomrule
 \end{tabular}
-%\end{table}
 \end{frame}
 
 % --------------------------- Slide 26 --------------------------------- %
@@ -457,9 +463,7 @@ Donde:
 \frametitle{Formato de entrada con scanf}
 \textbf{Especificadores de conversión de cadenas y caracteres para \textit{scanf}}\vspace{5mm}\\
 \scriptsize
-%\begin{table}[h]
 \centering
-%\caption{Especificadores de conversión de cadenas y caracteres para \textit{scanf}.}
 \begin{tabular}{lp{6cm}}
 	\toprule
 	\textbf{Especificador} & \textbf{Descripción}\\
@@ -468,5 +472,4 @@ Donde:
 	\%s & Lee una cadena. El argumento correspondiente es un apuntador a un arreglo de tipo \textbf{char} que sea lo suficientemente grande para almacenar la cadena y el caracter nulo ('\textbackslash0'), el cual se agrega automáticamente. \\
 	\bottomrule
 \end{tabular}
-%\end{table}
 \end{frame}

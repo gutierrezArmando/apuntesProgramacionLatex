@@ -1,0 +1,64 @@
+%!TEX root = P_Manual.tex
+\usepackage[spanish]{babel}
+
+\usepackage{graphicx,hyperref,url, materialbeamer}
+\usepackage{braket}
+%\usepackage{euler}
+\usepackage{listings}
+\usepackage{booktabs}% to use \toprule
+\usepackage{xfrac}% to use \sfrac{}{}
+
+\graphicspath{ {./figs/} }
+\setbeamercovered{transparent}
+\lstdefinestyle{customc}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  xleftmargin=\parindent,
+  language=C,
+  showstringspaces=false,
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+  extendedchars=true,
+  breakatwhitespace=false
+}
+\lstset{escapechar=@,style=customc}
+
+
+
+\usefonttheme{professionalfonts} % using non standard fonts for beamer
+%\usefonttheme{serif}
+
+% The title of the presentation:
+%  - first a short version which is visible at the bottom of each slide;
+%  - second the full title shown on the title slide;
+\title[Programación]{Programación}
+
+% Optional: a subtitle to be dispalyed on the title slide
+\subtitle{Tronco Común de Ingeniería \\ FCQI}
+
+% The author(s) of the presentation:
+%  - again first a short version to be displayed at the bottom;
+%  - next the full list of authors, which may include contact information;
+\author[Violeta Ocegueda]{Violeta Ocegueda} 
+  
+%\titlegraphic{\includegraphics[width=\textwidth]{atac-logo}}
+
+% The institute:
+%  - to start the name of the university as displayed on the top of each slide
+%    this can be adjusted such that you can also create a Dutch version
+%  - next the institute information as displayed on the title slide
+\institute[UABC]{Profesor-Investigador \\ Facultad de Ciencias Químicas e Ingeniería \\ Universidad Autónoma de Baja California \\ Campus Tijuana}
+
+% Add a date and possibly the name of the event to the slides
+%  - again first a short version to be shown at the bottom of each slide
+%  - second the full date and event name for the title slide
+\date[\today]{\today}
+
+\providecommand{\di}{\mathop{}\!\mathrm{d}}
+\providecommand*{\der}[3][]{\frac{d\if?#1?\else^{#1}\fi#2}{d #3\if?#1?\else^{#1}\fi}} 
+ \providecommand*{\pder}[3][]{% 
+    \frac{\partial\if?#1?\else^{#1}\fi#2}{\partial #3\if?#1?\else^{#1}\fi}% 
+  }
