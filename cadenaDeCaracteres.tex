@@ -1,0 +1,104 @@
+\section*{Cadenas de Caracteres}
+
+%- - - - - - - - - - - - - - - - - - - - - Slide 01 - - - - - - - - - - - - - - - - - - - - -
+\begin{frame}[t, fragile]
+    \frametitle{Cadena de caracteres}
+    \justify
+    \hspace{5mm}En el lenguaje C no existe el tipo de dato cadena (string) como en otros lenguajes de programación, por lo que se utiliza un arreglo (lista finita de n cantidad de elementos del mismo tipo) de caracteres, para poder almacenar una cadena:
+    \begin{lstlisting}
+                char cad[] = "Lenguaje";
+\end{lstlisting}
+    \vspace{-2mm}
+    \hspace{5mm}Una cadena de caracteres es un arreglo de caracteres que contiene al final el carácter nulo ( $\backslash$0); por esta razón es necesario que al declarar los arreglos éstos sean de un carácter más que la cadena más grande. El compilador inserta automáticamente un carácter nulo al final de la cadena, de modo que la secuencia real sería:
+    \begin{lstlisting}
+                char cad[9] = "Lenguaje";
+\end{lstlisting}
+\end{frame}
+
+
+%- - - - - - - - - - - - - - - - - - - - - Slide 02 - - - - - - - - - - - - - - - - - - - - -
+\begin{frame}
+    \frametitle{Cadena de caracteres}
+    \begin{center}\textbf{Lectura}\end{center}
+    \justify
+    \hspace{5mm}Una opción para almacenar una cadena de caracteres es el uso de la palabra reservada \textbf{scanf(variable)} pero, si queremos almacenar una cadena con espacios en blanco no lo podemos hacer con ella, sino que debemos utilizar la palabra reservada \textbf{gets}, que se encuentra dentro de la librería string.h; \textbf{gets} sólo se utiliza para leer cadenas de caracteres y scanf para leer cualquier tipo de variable, de preferencia de tipo numérico.
+\end{frame}
+
+%- - - - - - - - - - - - - - - - - - - - - Slide 03 - - - - - - - - - - - - - - - - - - - - -
+\begin{frame}
+    \frametitle{Cadena de caracteres}
+    \centering
+    Ejemplo:
+    \lstinputlisting[style=customc]{codigos/cadenas/ejemploLecturaEscritura.c}
+\end{frame}
+
+
+
+%- - - - - - - - - - - - - - - - - - - - - Slide 04 - - - - - - - - - - - - - - - - - - - - -
+\begin{frame}
+    \frametitle{Cadena de caracteres}
+    \begin{center}\textbf{Escritura}\end{center}
+    La función \textbf{puts()}, escribe una cadena de caracteres de salida y remplaza el caracter nulo de terminación de la cadena ($\backslash$0) por el carácter de nueva línea ($\backslash$n).
+\end{frame}
+
+
+
+%- - - - - - - - - - - - - - - - - - - - - Slide 05 - - - - - - - - - - - - - - - - - - - - -
+\begin{frame}[fragile]
+    \frametitle{Cadena de caracteres}
+    \begin{center}\textbf{Asignación de Cadenas}\end{center}
+    \justify
+    \hspace{5mm}C soporta dos métodos para asignar cadenas. Uno de ellos, ya visto anteriormente, cuando se inicializaban las variables de cadena. La sintaxis utilizada:
+    \begin{lstlisting}
+char cadena[longitudCadena] = "ConstanteCadena";
+    \end{lstlisting}
+\end{frame}
+
+
+%- - - - - - - - - - - - - - - - - - - - - Slide 06 - - - - - - - - - - - - - - - - - - - - -
+\begin{frame}[fragile]
+    \frametitle{Cadena de caracteres}
+    \begin{center}\textbf{Asignación de Cadenas}\end{center}
+    \hspace{5mm}El segundo método para asignación de una cadena a otra es utilizar la función strcpy( ). La función copia los caracteres de la cadena fuente a la cadena destino. La cadena destino debe tener espacio suficiente para contener toda la cadena fuente. El prototipo de la función:
+    \begin{lstlisting}
+    char* strcpy(char* destino, const char* fuente);
+    \end{lstlisting}
+    Una vez definido el arreglo de caracteres, se le asigna una cadena constante:
+    \begin{lstlisting}
+char nombre[41];
+strcpy(nombre, "Cadena a copiar");\end{lstlisting}
+\end{frame}
+
+
+%- - - - - - - - - - - - - - - - - - - - - Slide 07 - - - - - - - - - - - - - - - - - - - - -
+\begin{frame}[fragile]
+    \frametitle{Cadena de caracteres}
+    \begin{center}\textbf{Comparación de Cadenas}\end{center}
+    La biblioteca string.h proporciona un conjunto de funciones que comparan cadenas. Estas funciones comparan los caracteres de dos cadenas utilizando el valor ASCII de cada carácter. La funcion es strcmp( ).
+    \begin{lstlisting}
+    int strcmp(const char* cad1, const char* cad2);
+    \end{lstlisting}
+    La función compara las cadenas cad1 y cad2. El resultado entero es:
+    \begin{itemize}
+        \item $ < $ 0 si cad1 es menor que cad2.
+        \item $ = $ 0 si cad1 es igual a cad2.
+        \item $ > $ 0 si cad1 es mayor que cad2.
+    \end{itemize}
+\end{frame}
+
+
+
+%- - - - - - - - - - - - - - - - - - - - - Slide 08 - - - - - - - - - - - - - - - - - - - - -
+\begin{frame}[fragile]
+    \frametitle{Cadena de caracteres}
+    \begin{center}\textbf{Ejemplo de Comparación de Cadenas}\end{center}
+    \begin{lstlisting}[basicstyle=\ttfamily\tiny]
+    char cad1[ ] = "Microsoft C";
+    char cad2[ ] = "Microsoft Visual C"
+    int i;
+    i = strcmp(cad1, cad2); /*i, toma un valor negativo */
+    strcmp("Waterloo", "Windows") /*< 0 {Devuelve un valor negativo}*/
+    strcmp("Mortimer", "Mortim") /*> 0 {Devuelve un valor positivo}*/
+    strcmp("Jertru", "Jertru") /*= 0 {Devuelve cero}*/
+    \end{lstlisting}
+\end{frame}
