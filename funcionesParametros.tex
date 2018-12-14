@@ -1,0 +1,82 @@
+\section*{Funciones con parámetro por valor y que regresan valor}
+
+%- - - - - - - - - - - - - - - - - Título - - - - - - - - - - - - - - - - - -%
+\begin{frame}[c] 
+\centering
+\huge \textbf{Funciones con parámetros por valor y\\que regresan valor}
+\end{frame}
+
+
+
+%- - - - - - - - - - - - - - - - - Slide 01 - - - - - - - - - - - - - - - - - -%
+\begin{frame}
+    \frametitle{Funciones con parámetros por valor y que regresan valor}
+    Estas funciones son las más utilizadas en la programación ya que pueden recibir uno o más valores llamados
+    parámetros y regresan un solo valor de tipo entero, real o carácter. Si deseas regresar un arreglo de carácter
+    es necesario hacerlo desde los parámetros. Los parámetros o valores son enviados del programa principal
+    o de otra función. Dentro de la función se realizan solamente las instrucciones (cálculos u operaciones). Es
+    importante revisar que el tipo de dato que regresará la función sea del mismo tipo que el valor declarado en
+    el encabezado de la misma.
+\end{frame}
+
+
+
+%- - - - - - - - - - - - - - - - - Slide 02 - - - - - - - - - - - - - - - - - -%
+\begin{frame}
+\frametitle{Funciones con parámetros por valor y que regresan valor}
+\begin{center}
+    \textbf{Parámetros de una Función}
+\end{center}
+También son llamados argumentos y se corresponden con una serie de valores que se especifican en la
+llamada a la función, o en la declaración de la misma, de los que depende el resultado de la función; dichos
+valores nos permiten la comunicación entre dos funciones.
+\end{frame}
+
+
+
+
+%- - - - - - - - - - - - - - - - - Slide 03 - - - - - - - - - - - - - - - - - -%
+\begin{frame}
+\frametitle{Funciones con parámetros por valor y que regresan valor}
+\begin{center}
+    \textbf{Paso de parámetros en una Función}
+\end{center}
+    \justify
+    En C todos los parámetros se pasan “por valor”, es decir, en cada llamada a la función se genera una copia de los valores de los parámetros actuales, que se almacenan en variables temporales mientras dure la ejecución de la función. Sin embargo, cuando sea preciso es posible hacer que una función modifique el valor de una variable que se pase como parámetro actual en la llamada a la función. Para ello, lo que se debe proporcionar a la función no es el valor de la variable, sino su dirección, lo cual se realiza mediante un puntero que señale a esa dirección; a estos parámetros los llamamos por variable o por referencia; en este tipo de parámetros los datos salen modificados.
+
+\end{frame}
+
+
+
+%- - - - - - - - - - - - - - - - - Slide 04 - - - - - - - - - - - - - - - - - -%
+\begin{frame}[fragile]
+\frametitle{Funciones con parámetros por valor y que regresan valor}
+\begin{lstlisting}
+int suma(int numA, int numB);
+int main(void){
+    int a;
+    int b = 3;
+    a = suma(b,6);
+    printf("%d", a);
+    return 0;
+}
+
+int suma(int numA, int numB){
+    return numA + numB;
+}
+\end{lstlisting}
+\end{frame}
+
+
+
+%- - - - - - - - - - - - - - - - - Slide 05 - - - - - - - - - - - - - - - - - -%
+\begin{frame}[fragile]
+\frametitle{Funciones con parámetros por valor y que regresan valor}
+\begin{center}
+    \textbf{Paso de parámetros en una funciones con arreglos unidimencionales y bidimencionales}
+\end{center}
+\begin{itemize}
+    \item \textcolor{blue}{Unidimencional:} \\tipoDevuelto nombreFunción(tipo nombreVector[])
+    \item \textcolor{blue}{Bidimencional:} \\tipoDevuelto nombreFunción(tipo nombreMatriz[][tam])
+\end{itemize}
+\end{frame}

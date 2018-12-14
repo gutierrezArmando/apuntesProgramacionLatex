@@ -1,0 +1,60 @@
+\section*{Prototipos, llamada y cuerpo de la función}
+
+%- - - - - - - - - - - - - - - - - Título - - - - - - - - - - - - - - - - - -%
+\begin{frame}[c] 
+\centering
+\huge \textbf{Prototipos, llamada y cuerpo de la función}
+\end{frame}
+
+
+
+% - - - - - - - - - - - - - - - - - Slide 01 - - - - - - - - - - - - - - - -
+\begin{frame}[t]
+    \frametitle{Prototipos, llamada y cuerpo de la función}
+    \begin{center}
+        \textbf{Prototipo}
+    \end{center}
+    \vspace{-6mm}
+    \hspace{5mm}Un prototipo es el encabezado de una función, es decir la primera línea de la función. La ventaja de utilizar prototipos es que las funciones pueden estar en cualquier lugar y en cualquier orden y pueden ser llamadas desde cualquier punto del programa principal o de otra función.
+    \vspace{-2mm}
+    \begin{block}{Orden}
+        \begin{enumerate}
+            \item Declaración de los prototipos de cada función.\pause
+            \item Cuerpo de la función principal.\pause
+            \item Al final el cuerpo de cada función.
+        \end{enumerate}
+    \end{block}
+\end{frame}
+
+
+
+% - - - - - - - - - - - - - - - - - Slide 02 - - - - - - - - - - - - - - - -
+\begin{frame}[fragile]
+    \frametitle{Prototipos, llamada y cuerpo de la función}
+    \begin{center}
+        \textbf{EJEMPLO}
+    \end{center}
+    \begin{lstlisting}[basicstyle=\ttfamily\tiny]
+#librearias
+#Constantes
+funcionA();/*Prototípo de la función A*/
+funcionB();/*Prototípo de la función B*/
+int main(){
+    variables
+    Cuerpo del programa principal
+    ............
+    funcionaA();
+    funcionaB();
+    .......
+    return 0;
+}
+funcionA(){
+    variables locales de función
+    instrucciones
+}
+funcionB(){
+    variables locales de función
+    instrucciones
+}
+\end{lstlisting}
+\end{frame}
